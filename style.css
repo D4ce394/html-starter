@@ -1,0 +1,79 @@
+/* Konfigurasi Dasar */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #E2F5FE;
+    scroll-behavior: smooth;
+}
+
+/* Nav Transition Classes */
+.nav-scrolled {
+    background-color: white !important;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.nav-scrolled #nav-brand, 
+.nav-scrolled #nav-links {
+    color: #132539 !important;
+}
+
+/* Custom Utilities */
+.btn-primary:hover {
+    background-color: #0d8cd9 !important; /* Accent / Lighter Navy */
+}
+
+/* Gallery Hover Effect */
+.gallery-item {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    border: 1px solid #E2F5FE;
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(19, 37, 57, 0);
+    transition: background-color 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-item:hover .gallery-overlay {
+    background-color: rgba(19, 37, 57, 0.4);
+}
+
+.gallery-btn {
+    opacity: 0;
+    transition: opacity 0.5s;
+    background-color: rgba(226, 245, 254, 0.2);
+    backdrop-filter: blur(8px);
+    padding: 0.75rem;
+    border-radius: 9999px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.gallery-item:hover .gallery-btn {
+    opacity: 1;
+}
