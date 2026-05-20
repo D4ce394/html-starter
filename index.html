@@ -1,96 +1,512 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script defer src="/_vercel/insights/script.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"
-    />
-    <title>Vercel HTML Starter</title>
-    <meta
-      name="description"
-      content="High-performance HTML based website template."
-    />
-  </head>
-  <body>
-    <h1>Vercel HTML Starter</h1>
-    <p>
-      This template is a simple, but powerful single
-      <code>index.html</code> file deployed to
-      <a href="https://vercel.com">Vercel</a>. When your site is deployed, all
-      static assets (like HTML, JavaScript, CSS, images, and more) are deployed
-      globally to every
-      <a href="https://vercel.com/docs/concepts/edge-network/overview"
-        >Vercel Edge Network</a
-      >
-      region.
-    </p>
-    <h2>Simple, privacy-friendly analytics</h2>
-    <p>
-      Want to understand your visitor traffic? Vercel Analytics gives you
-      first-party, privacy-friendly traffic analytics for your HTML site. This
-      template is already configured using the following script:
-    </p>
-    <pre><code>&lt;script defer src="/_vercel/insights/script.js"&gt;&lt;/script&gt;</code></pre>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/analytics">Vercel Analytics</a>.
-    </p>
-    <h2>Integrated with git</h2>
-    <p>
-      Deploying updates to your site is as simple as
-      <code>git push</code> thanks to Vercel's advanced
-      <a href="https://vercel.com/docs/concepts/git">Git Integration</a>.
-      Support for GitHub, GitLab, Bitbucket is zero-configuration, and with the
-      flexible Vercel CLI and API, you can integrate with any tool possible.
-    </p>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/git">Git Integration</a>.
-    </p>
-    <h2>Fast <code>gzip</code> compression</h2>
-    <p>
-      To help ensure the smallest possible file sizes for your static assets,
-      the Vercel Edge Network compresses files by default using
-      <code>gzip</code>. You can also optionally use
-      <code>brotli</code> compressesion if you prefer.
-    </p>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/edge-network/compression"
-        >compression</a
-      >.
-    </p>
-    <h2>Advanced routing configuration</h2>
-    <p>
-      Vercel gives you a variety of ways to configure the routing of your
-      website. For example, adding redirects, rewrites, or headers to your page.
-      While you can use <code>vercel.json</code> to define these through JSON,
-      you can also express your routing configuration as code using
-      <a href="https://vercel.com/docs/concepts/functions/edge-middleware"
-        >Vercel Edge Middleware</a
-      >.
-    </p>
-    <p>
-      Middleware runs before the
-      <a href="https://vercel.com/docs/concepts/edge-network/caching"
-        >Vercel Edge Network Cache</a
-      >, so you can configure routing exactly as your application needs. For
-      example, this template uses <code>middleware.js</code> defined in the root
-      of the repository to add additional security headers to the site:
-    </p>
-    <pre><code>referrer-policy: origin-when-cross-origin
-strict-transport-security: max-age=31536000; includeSubDomains; preload
-x-content-type-options: nosniff
-x-dns-prefetch-control: on
-x-frame-options: DENY</code></pre>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/functions/edge-middleware"
-        >Vercel Edge Middleware</a
-      >.
-    </p>
-  </body>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LKSA Insan Harapan - Memberikan Harapan</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAV BAR -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 h-20 flex items-center bg-transparent">
+        <div class="max-w-7xl mx-auto px-6 w-full flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-12 h-12 rounded-full flex items-center justify-center bg-[#0A7BBF] overflow-hidden">
+                    <img src="assets/logo_lksa.jpeg" alt="Profile" class="w-full h-full object-cover">
+                </div>
+                <span id="nav-brand" class="text-xl font-bold tracking-tight text-white">
+                    LKSA Insan Harapan
+                </span>
+            </div>
+            
+            <div id="nav-links" class="hidden md:flex items-center gap-8 text-sm font-semibold text-white">
+                <a href="#" class="hover:opacity-70 transition">Beranda</a>
+                <a href="#news" class="hover:opacity-70 transition">Berita</a>
+                <a href="#about" class="hover:opacity-70 transition">Tentang Kami</a>
+                <a href="#programs" class="hover:opacity-70 transition">Program</a>
+                <a href="#gallery" class="hover:opacity-70 transition">Galeri</a>
+                <a href="#donation" class="btn-primary text-white px-5 py-2 rounded-md transition ml-4 inline-block text-center shadow-lg bg-[#0A7BBF]">
+                    Donasi Sekarang
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="assets/kegiatan1.jpeg" alt="Background" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-[#0A7BBF]/95 via-[#0A7BBF]/80 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-6 text-center lg:text-left lg:ml-24">
+            <div class="flex justify-center lg:justify-start mb-6">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 backdrop-blur-md border border-[#E2F5FE]/20 rounded-full text-xs font-medium text-[#E2F5FE] bg-[#E2F5FE10]">
+                    <i data-lucide="heart" class="w-3.5 h-3.5 fill-[#E2F5FE]"></i>
+                    Yayasan Sosial & Panti Asuhan
+                </div>
+            </div>
+
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight text-white">
+                Memberikan Harapan untuk <br />
+                <span class="text-[#E2F5FE]">Generasi Selanjutnya</span>
+            </h1>
+
+            <p class="text-lg md:text-xl max-w-3xl mb-10 leading-relaxed text-[#E2F5FE]/90">
+                Bersama membangun masa depan cerah untuk anak-anak Indonesia. 
+                Bergabunglah dengan kami dalam memberikan pendidikan, kasih sayang, 
+                dan harapan untuk generasi penerus bangsa.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <a href="#donation" class="bg-[#E2F5FE] text-[#0A7BBF] px-8 py-3.5 rounded-md font-bold transition flex items-center justify-center gap-2 shadow-xl hover:bg-white">
+                    Donasi Sekarang <i data-lucide="heart" class="w-[18px]"></i>
+                </a>
+                <a href="#about" class="bg-transparent hover:bg-white/10 backdrop-blur-sm border border-[#E2F5FE] text-white px-8 py-3.5 rounded-md font-bold transition flex items-center justify-center gap-2">
+                    Pelajari Lebih Lanjut <i data-lucide="arrow-right" class="w-[18px]"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- BERITA SECTION -->
+    <section id="news" class="py-16 px-4 bg-[#F8FAFC] scroll-mt-20">
+        <div class="max-w-5xl mx-auto">
+            <div class="flex items-center justify-between mb-8">
+                <h2 class="text-3xl font-bold text-[#132539]">Berita Terkini</h2>
+                <span class="px-4 py-1 bg-[#0A7BBF]/10 text-[#0A7BBF] rounded-full text-sm font-semibold">
+                    Kurban 2026
+                </span>
+            </div>
+
+            <div class="bg-white rounded-[2.5rem] overflow-hidden shadow-lg border border-[#E2F5FE] flex flex-col md:flex-row">
+                <!-- Gambar Berita -->
+                <div class="md:w-2/5 h-32 md:h-auto overflow-hidden rounded-2xl">
+                    <img 
+                        src="https://images.unsplash.com/photo-1586459226458-409b7248148a?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                        alt="Persiapan Kurban" 
+                        class="w-full h-full object-cover object-center md:object-[center_35%] transition-transform duration-500 hover:scale-110"
+                    >
+                </div>
+
+                <!-- Konten Berita -->
+                <div class="md:w-3/5 p-8 md:p-10 flex flex-col justify-center">
+                    <div class="flex items-center gap-2 text-slate-500 text-sm mb-3">
+                        <i data-lucide="calendar" class="w-4 h-4"></i>
+                        <span>27 Mei 2026</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-[#132539] mb-4">
+                        Persiapan Pelaksanaan Ibadah Kurban 1447H di LKSA Insan Harapan
+                    </h3>
+                    <p class="text-slate-600 leading-relaxed mb-6">
+                        Menjelang Idul Adha, panti asuhan kami mulai membuka penerimaan dan penyaluran hewan kurban. Seluruh proses akan dilakukan dengan standar kebersihan yang ketat untuk memastikan amanah para donatur tersampaikan kepada yang berhak.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="flex items-center gap-2 text-[#0A7BBF] font-medium">
+                            <i data-lucide="check-circle" class="w-5 h-5"></i>
+                            <span>Hewan Sehat & Layak</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-[#0A7BBF] font-medium">
+                            <i data-lucide="check-circle" class="w-5 h-5"></i>
+                            <span>Laporan Transparan</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-24 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <div class="inline-block px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4 border border-[#132539]/10 bg-[#E2F5FE] text-[#0A7BBF]">
+                    Tentang Kami
+                </div>
+                <h2 class="text-4xl md:text-5xl font-extrabold text-[#132539] mb-4">
+                    Dedikasi untuk Masa Depan Anak Indonesia
+                </h2>
+                <div class="w-20 h-1.5 mx-auto rounded-full bg-[#0A7BBF]"></div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-16 items-center mb-24">
+                <div class="relative">
+                    <div class="absolute -top-6 -left-6 w-full h-full rounded-3xl -z-10 bg-[#E2F5FE]"></div>
+                    <div class="rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] border-4 border-white">
+                        <img src="assets/kegiatan3.jpeg" alt="Aktivitas LKSA" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-3xl font-bold text-[#132539] mb-4">LKSA Insan Harapan</h3>
+                        <p class="text-slate-600 leading-relaxed mb-6">
+                            LKSA Insan Harapan adalah yayasan sosial dan panti asuhan yang berlokasi di Bandung, Indonesia. 
+                            Kami berdedikasi memberikan pendidikan berkualitas dan tempat tinggal penuh kasih sayang bagi anak-anak yang membutuhkan.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-5 gap-8">
+                <div class="lg:col-span-2 p-10 rounded-3xl text-white relative overflow-hidden group bg-[#0A7BBF]">
+                    <i data-lucide="target" class="absolute -right-4 -bottom-4 w-32 h-32 text-white/5 group-hover:scale-110 transition-transform duration-500"></i>
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 bg-[#E2F5FE]/10 rounded-xl flex items-center justify-center mb-6">
+                            <i data-lucide="lightbulb" class="text-[#E2F5FE] w-7 h-7"></i>
+                        </div>
+                        <h4 class="text-3xl font-bold mb-6 italic">VISI</h4>
+                        <p class="text-xl leading-relaxed text-[#E2F5FE] font-medium">
+                            "Memanusiakan manusia sesuai dengan kehendak Allah SWT. Menjadi kader bangsa yang insani."
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-3 p-10 rounded-3xl border border-[#E2F5FE] bg-[#E2F5FE30]">
+                    <h4 class="text-3xl font-bold text-[#132539] mb-8 flex items-center gap-3">
+                        MISI
+                        <div class="h-px flex-1 bg-[#132539]/20"></div>
+                    </h4>
+                    
+                    <div class="space-y-6">
+                        <div class="flex gap-5 group">
+                            <div class="flex-shrink-0 w-12 h-12 bg-white rounded-full shadow-sm flex items-center justify-center border border-[#E2F5FE] group-hover:bg-[#132539] group-hover:text-white transition-all">
+                                <i data-lucide="heart" class="w-6 h-6"></i>
+                            </div>
+                            <p class="text-lg text-slate-700 leading-relaxed pt-2">
+                                Memberikan pelayanan dan bimbingan sebagaimana peran orang tua dalam keluarga.
+                            </p>
+                        </div>
+                        <div class="flex gap-5 group">
+                            <div class="flex-shrink-0 w-12 h-12 bg-white rounded-full shadow-sm flex items-center justify-center border border-[#E2F5FE] group-hover:bg-[#132539] group-hover:text-white transition-all">
+                                <i data-lucide="award" class="w-6 h-6"></i>
+                            </div>
+                            <p class="text-lg text-slate-700 leading-relaxed pt-2">
+                                Mengembangkan potensi sumber daya insani berdasarkan minat dan bakat anak.
+                            </p>
+                        </div>
+                        <div class="flex gap-5 group">
+                            <div class="flex-shrink-0 w-12 h-12 bg-white rounded-full shadow-sm flex items-center justify-center border border-[#E2F5FE] group-hover:bg-[#132539] group-hover:text-white transition-all">
+                                <i data-lucide="users" class="w-6 h-6"></i>
+                            </div>
+                            <p class="text-lg text-slate-700 leading-relaxed pt-2">
+                                Membantu pemerintah sesuai dengan ajaran Islam mengentaskan kemiskinan dari keterpurukan sosial secara terpadu dan terencana.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROGRAMS SECTION -->
+    <section id="programs" class="py-24 bg-white px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <div class="inline-block px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4 border border-[#132539]/10 bg-[#E2F5FE] text-[#0A7BBF]">
+                    Program Kami
+                </div>
+                <h2 class="text-4xl md:text-5xl font-extrabold text-[#132539] mb-4">
+                    Fokus Pengembangan Holistik
+                </h2>
+                <div class="w-20 h-1.5 mx-auto rounded-full mb-6 bg-[#0A7BBF]"></div>
+                <p class="text-slate-500 max-w-2xl mx-auto text-lg">
+                    Kami berkomitmen untuk mengembangkan anak-anak secara menyeluruh melalui tiga pilar utama
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Program 1 -->
+                <div class="relative bg-white rounded-3xl shadow-sm overflow-hidden border border-slate-100 max-w-sm">
+                    <!-- Bagian Gambar (Tinggi dinaikkan ke h-64) -->
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1706250718869-677489d2691d?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                            alt="Pendidikan" 
+                            class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+
+                    <!-- Bagian Konten -->
+                    <div class="p-6 pt-10 relative">
+                        <!-- Ikon tetap mengambang di antara gambar dan teks -->
+                        <div class="absolute -top-7 left-6 w-14 h-14 bg-white rounded-2xl shadow-lg flex items-center justify-center text-[#132539] z-10">
+                            <i data-lucide="book-open" class="w-6 h-6"></i>
+                        </div>
+
+                        <h3 class="text-xl font-bold text-[#132539] mb-3">Pendidikan Berkualitas</h3>
+                        <p class="text-slate-600 leading-relaxed text-sm">
+                            Kami menyediakan akses pendidikan formal dan non-formal untuk memastikan setiap anak mendapatkan kesempatan belajar terbaik.
+                        </p>
+                    </div>
+                </div>
+                <!-- Program 2 -->
+                <div class="relative bg-white rounded-3xl shadow-sm overflow-hidden border border-slate-100 max-w-sm">
+                    
+                    <!-- Bagian Gambar (Tinggi dinaikkan ke h-64) -->
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1711202675885-d0a0ce63b5bf?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                            alt="Bahan Pokok" 
+                            class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+
+                    <!-- Bagian Konten -->
+                    <div class="p-6 pt-10 relative">
+                        <!-- Ikon tetap mengambang di antara gambar dan teks -->
+                        <div class="absolute -top-7 left-6 w-14 h-14 bg-white rounded-2xl shadow-lg flex items-center justify-center text-[#132539] z-10">
+                            <i data-lucide="heart" class="w-6 h-6"></i>
+                        </div>
+
+                        <h3 class="text-xl font-bold text-[#132539] mb-3">Pertumbuhan Spiritual</h3>
+                        <p class="text-slate-600 leading-relaxed text-sm">
+                            Membimbing anak-anak dalam nilai-nilai moral dan spiritual untuk membentuk karakter yang kuat dan berakhlak mulia.
+                        </p>
+                    </div>
+                </div>
+                <!-- Program 3 -->
+                <div class="relative bg-white rounded-3xl shadow-sm overflow-hidden border border-slate-100 max-w-sm">
+                    
+                    <!-- Bagian Gambar (Tinggi dinaikkan ke h-64) -->
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?auto=format&fit=crop&q=80&w=1000" 
+                        alt="Nasi dalam mangkuk" 
+                        class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+
+                    <!-- Bagian Konten -->
+                    <div class="p-6 pt-10 relative">
+                        <!-- Ikon tetap mengambang di antara gambar dan teks -->
+                        <div class="absolute -top-7 left-6 w-14 h-14 bg-white rounded-2xl shadow-lg flex items-center justify-center text-[#132539] z-10">
+                            <i data-lucide="home" class="w-6 h-6"></i>
+                        </div>
+
+                        <h3 class="text-xl font-bold text-[#132539] mb-3">Kebutuhan Sehari-hari</h3>
+                        <p class="text-slate-600 leading-relaxed text-sm">
+                            Memenuhi kebutuhan dasar seperti makanan bergizi, tempat tinggal nyaman, dan perawatan kesehatan yang memadai untuk anak-anak di LKSA Insan Harapan.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IMPACT SECTION -->
+    <section id="impact" class="py-24 text-white px-6 bg-[#0A7BBF]">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <div class="inline-block px-4 py-1 backdrop-blur-md text-[#E2F5FE] rounded-full text-xs font-bold uppercase tracking-wider mb-4 border border-[#E2F5FE]/20 bg-[#E2F5FE10]">
+                    Dampak & Transparansi
+                </div>
+                <h2 class="text-4xl md:text-5xl font-extrabold mb-4">
+                    Pencapaian Kami
+                </h2>
+                <div class="w-20 h-1.5 mx-auto rounded-full mb-6 bg-[#E2F5FE]"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-white/5 backdrop-blur-md border border-white/10 p-10 rounded-3xl text-center hover:bg-white/10 transition-all duration-300 group">
+                    <div class="w-16 h-16 bg-[#E2F5FE]/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="users" class="text-[#E2F5FE] w-7 h-7"></i>
+                    </div>
+                    <div class="text-5xl font-black mb-2 tracking-tight text-[#E2F5FE]">28</div>
+                    <div class="text-[#E2F5FE]/60 font-medium uppercase tracking-widest text-sm">Anak Asuh Aktif</div>
+                </div>
+                <div class="bg-white/5 backdrop-blur-md border border-white/10 p-10 rounded-3xl text-center hover:bg-white/10 transition-all duration-300 group">
+                    <div class="w-16 h-16 bg-[#E2F5FE]/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="award" class="text-[#E2F5FE] w-7 h-7"></i>
+                    </div>
+                    <div class="text-5xl font-black mb-2 tracking-tight text-[#E2F5FE]">27</div>
+                    <div class="text-[#E2F5FE]/60 font-medium uppercase tracking-widest text-sm">Tahun Pengalaman</div>
+                </div>
+                <div class="bg-white/5 backdrop-blur-md border border-white/10 p-10 rounded-3xl text-center hover:bg-white/10 transition-all duration-300 group">
+                    <div class="w-16 h-16 bg-[#E2F5FE]/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="shield-check" class="text-[#E2F5FE] w-7 h-7"></i>
+                    </div>
+                    <div class="text-5xl font-black mb-2 tracking-tight text-[#E2F5FE]">100%</div>
+                    <div class="text-[#E2F5FE]/60 font-medium uppercase tracking-widest text-sm">Transparansi</div>
+                </div>
+            </div>
+
+            <div class="max-w-3xl mx-auto">
+                <div class="bg-[#E2F5FE5] backdrop-blur-sm border border-[#E2F5FE]/10 p-10 rounded-3xl text-center">
+                    <h4 class="text-2xl font-bold mb-4 text-[#E2F5FE]">Komitmen Transparansi Kami</h4>
+                    <p class="text-white/70 leading-relaxed">
+                        Setiap donasi yang kami terima dikelola dengan penuh tanggung jawab dan transparansi. 
+                        Kami secara rutin melaporkan penggunaan dana kepada para donatur untuk memastikan 
+                        kepercayaan dan akuntabilitas dalam setiap program yang kami jalankan.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY SECTION -->
+    <section id="gallery" class="py-24 bg-white px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <div class="inline-block px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4 border border-[#132539]/10 bg-[#E2F5FE] text-[#0A7BBF]">
+                    Galeri
+                </div>
+                <h2 class="text-4xl md:text-5xl font-extrabold text-[#132539] mb-4">
+                    Kehidupan Sehari-hari di LKSA
+                </h2>
+                <div class="w-20 h-1.5 mx-auto rounded-full mb-6 bg-[#0A7BBF]"></div>
+            </div>
+
+            <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Gallery items will be injected by JS or hardcoded -->
+            </div>
+        </div>
+    </section>
+
+    <!-- DONATION INFO -->
+    <section id="donation" class="py-24 px-6 bg-[#E2F5FE]">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <div class="inline-block px-4 py-1 text-white rounded-full text-xs font-bold uppercase tracking-wider mb-4 bg-[#0A7BBF]">
+                    Donasi
+                </div>
+                <h2 class="text-4xl md:text-5xl font-extrabold text-[#132539] mb-4">
+                    Bantu Wujudkan Harapan Mereka
+                </h2>
+                <div class="w-20 h-1.5 mx-auto rounded-full mb-6 bg-[#0A7BBF]"></div>
+            </div>
+
+            <div class="max-w-5xl mx-auto bg-white rounded-[3rem] overflow-hidden shadow-xl border border-[#E2F5FE] flex flex-col md:flex-row">
+                <!-- Bagian Kiri: Daftar Bank -->
+                <div class="p-10 md:p-12 md:w-1/2">
+                    <h2 class="text-3xl font-bold mb-6 text-[#132539]">Salurkan Kebaikan Anda</h2>
+                    <div class="space-y-4">
+                        <span id="bsi-tip" class="absolute top-2 right-2 bg-[#132539] text-white text-[10px] px-2 py-1 rounded opacity-0 transition-opacity">Tersalin!</span>
+                        <div class="p-5 rounded-2xl border border-[#E2F5FE] hover:border-[#132539]/30 transition-all cursor-pointer bg-[#E2F5FE20] group relative" 
+                            onclick="copyToClipboard('7062222268', 'bsi-tip')">
+                            
+                            <p class="text-xs text-slate-500 font-bold uppercase mb-1 tracking-wider">Bank Syariah Indonesia (BSI)</p>
+                            <div class="flex items-center justify-between">
+                                <p class="text-2xl font-mono font-bold text-[#132539]">706 222 2268</p>
+                                <i data-lucide="copy" class="w-4 h-4 text-slate-400 group-hover:text-[#0A7BBF] transition-colors"></i>
+                            </div>
+                            <p class="text-sm text-slate-600 mt-1">a.n. Panti Asuhan Insan Harapan</p>
+
+                            <!-- Notifikasi kecil (Tooltip) -->
+                            <span id="bri-tip" class="absolute top-2 right-2 bg-[#132539] text-white text-[10px] px-2 py-1 rounded opacity-0 transition-opacity">Tersalin!</span>
+                        </div>
+                        <div class="p-5 rounded-2xl border border-[#E2F5FE] hover:border-[#132539]/30 transition-all cursor-pointer bg-[#E2F5FE20] group relative" 
+                            onclick="copyToClipboard('075501002307502', 'bri-tip')">
+                            
+                            <p class="text-xs text-slate-500 font-bold uppercase mb-1 tracking-wider">Bank Rakyat Indonesia (BRI)</p>
+                            <div class="flex items-center justify-between">
+                                <p class="text-2xl font-mono font-bold text-[#132539]">0755 0100 2307 502</p>
+                                <i data-lucide="copy" class="w-4 h-4 text-slate-400 group-hover:text-[#0A7BBF] transition-colors"></i>
+                            </div>
+                            <p class="text-sm text-slate-600 mt-1">a.n. Panti Asuhan Insan Harapan</p>
+
+                            <!-- Notifikasi kecil (Tooltip) -->
+                            <span id="bjb-tip" class="absolute top-2 right-2 bg-[#132539] text-white text-[10px] px-2 py-1 rounded opacity-0 transition-opacity">Tersalin!</span>
+                        </div>
+                        <div class="p-5 rounded-2xl border border-[#E2F5FE] hover:border-[#132539]/30 transition-all cursor-pointer bg-[#E2F5FE20] group relative" 
+                            onclick="copyToClipboard('0118776070100', 'bjb-tip')">
+                            
+                            <p class="text-xs text-slate-500 font-bold uppercase mb-1 tracking-wider">Bank BJB</p>
+                            <div class="flex items-center justify-between">
+                                <p class="text-2xl font-mono font-bold text-[#132539]">0118 7760 70100</p>
+                                <i data-lucide="copy" class="w-4 h-4 text-slate-400 group-hover:text-[#0A7BBF] transition-colors"></i>
+                            </div>
+                            <p class="text-sm text-slate-600 mt-1">a.n. Panti Asuhan Insan Harapan</p>
+
+                            <!-- Notifikasi kecil (Tooltip) -->
+                            <span id="bri-tip" class="absolute top-2 right-2 bg-[#132539] text-white text-[10px] px-2 py-1 rounded opacity-0 transition-opacity">Tersalin!</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bagian Kanan: Konfirmasi WhatsApp (Sekarang akan mengisi sisi kanan sepenuhnya) -->
+                <div class="p-10 md:p-12 md:w-1/2 text-white flex flex-col justify-center items-center text-center bg-[#0A7BBF]">
+                    <div class="w-16 h-16 bg-[#E2F5FE]/20 rounded-full flex items-center justify-center mb-6">
+                        <i data-lucide="check-circle-2" class="text-[#E2F5FE] w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold mb-4">Sudah Berdonasi?</h3>
+                    <p class="mb-8 text-[#E2F5FE]/80 leading-relaxed">
+                        Silakan konfirmasi bukti transfer agar kami dapat mencatat amanah Anda dengan transparan dan akuntabel.
+                    </p>
+                    <button class="flex items-center gap-3 px-10 py-4 rounded-full font-bold transition-all transform hover:scale-105 shadow-xl bg-[#E2F5FE] text-[#0A7BBF]">
+                        <i data-lucide="phone" class="w-5 h-5"></i>
+                        <a href="http://wa.me/6282116313233" target="_blank">via WhatsApp</a> 
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-16 px-6 text-[#E2F5FE]/60 bg-[#0273b8]">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 border-b border-white/10 pb-12">
+            <div>
+                <h4 class="text-white text-xl font-bold mb-6">LKSA Insan Harapan</h4>
+                <p class="text-sm leading-relaxed mb-6">
+                    Memberikan harapan, pendidikan, dan kasih sayang untuk generasi penerus bangsa sejak 1999.
+                </p>
+                <div class="flex items-center gap-2 text-[#E2F5FE] font-medium text-sm">
+                    <i data-lucide="heart" class="w-[18px] fill-current"></i>
+                    <span>Yayasan Terdaftar & Terpercaya</span>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="text-white font-bold mb-6">Tautan Cepat</h4>
+                <ul class="space-y-4 text-sm">
+                    <li><a href="#about" class="hover:text-white transition">Tentang Kami</a></li>
+                    <li><a href="#news" class="hover:text-white transition">Berita</a></li>
+                    <li><a href="#programs" class="hover:text-white transition">Program</a></li>
+                    <li><a href="#gallery" class="hover:text-white transition">Galeri</a></li>
+                    <li><a href="#donation" class="hover:text-white transition">Donasi</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white font-bold mb-6">Kontak Kami</h4>
+                <div class="space-y-4 text-sm">
+                    <div class="flex gap-3">
+                        <i data-lucide="map-pin" class="text-[#E2F5FE] shrink-0 w-[18px]"></i>
+                        <a href="https://maps.app.goo.gl/o5CboGiBt2TDxo4c8" class="hover:text-white transition" target="_blank">Jl. A. Yani Gg. Slamet II No.27/137D RT/RW.05/01 Kel. Bbk. Surabaya Kec. Kiaracondong Kota Bandung Provinsi Jawa Barat</a>
+                    </div>
+                    <div class="flex gap-3">
+                        <i data-lucide="phone" class="text-[#E2F5FE] shrink-0 w-[18px]"></i>
+                        <a href="http://wa.me/6282116313233" class="hover:text-white transition" target="_blank">+62 821 1631 3233</a>
+                    </div>
+                    <div class="flex gap-3">
+                        <i data-lucide="mail" class="text-[#E2F5FE] shrink-0 w-[18px]"></i>
+                        <a href="mailto:lksaharapankita19@gmail.com" class="hover:text-white transition" target="_blank">lksaharapankita19@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="text-white font-bold mb-6">Ikuti Kami</h4>
+                <p class="text-sm mb-6 leading-relaxed">
+                    Dapatkan update terbaru tentang kegiatan dan perkembangan anak-anak kami.
+                    <br>
+                    <br>
+                    <a href="https://www.instagram.com/insan_harapanofficial" 
+                    target="_blank" 
+                    class="text-sm transition-all duration-300 hover:text-[#E2F5FE]">
+                        Instagram: <span class="font-semibold">insan_harapanofficial</span>
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto pt-8 text-xs flex flex-col md:flex-row justify-between items-center gap-4">
+            <p>© 2026 LKSA Insan Harapan. Seluruh hak cipta dilindungi.</p>
+        </div>
+    </footer>
+
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="script.js"></script>
+    
+</body>
 </html>
