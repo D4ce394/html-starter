@@ -3,11 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LKSA Insan Harapan - Memberikan Harapan</title>
+    <title>LKSA Insan Harapan - Memberikan Harapan untuk Generasi Selanjutnya</title>
+
+    <!-- SEO -->
+    <meta name="description" content="LKSA Insan Harapan adalah yayasan sosial dan panti asuhan di Bandung. Bersama kami memberikan pendidikan, kasih sayang, dan harapan untuk anak-anak Indonesia. Donasi sekarang.">
+    <meta name="keywords" content="panti asuhan Bandung, donasi anak yatim, LKSA Insan Harapan, yayasan sosial, sedekah, kurban">
+    <meta name="author" content="LKSA Insan Harapan">
+    <meta name="theme-color" content="#0A7BBF">
+    <link rel="canonical" href="https://html-starter-lovat-nine-46.vercel.app/">
+
+    <!-- Open Graph / Social Share -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="LKSA Insan Harapan - Memberikan Harapan untuk Generasi Selanjutnya">
+    <meta property="og:description" content="Bersama membangun masa depan cerah untuk anak-anak Indonesia. Bergabunglah memberikan pendidikan, kasih sayang, dan harapan.">
+    <meta property="og:image" content="assets/kegiatan1.jpeg">
+    <meta property="og:locale" content="id_ID">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="assets/logo_lksa.jpeg">
+    <link rel="apple-touch-icon" href="assets/logo_lksa.jpeg">
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -25,12 +47,34 @@
             </div>
             
             <div id="nav-links" class="hidden md:flex items-center gap-8 text-sm font-semibold text-white">
-                <a href="#" class="hover:opacity-70 transition">Beranda</a>
-                <a href="#news" class="hover:opacity-70 transition">Berita</a>
-                <a href="#about" class="hover:opacity-70 transition">Tentang Kami</a>
-                <a href="#programs" class="hover:opacity-70 transition">Program</a>
-                <a href="#gallery" class="hover:opacity-70 transition">Galeri</a>
+                <a href="#home" class="nav-link hover:opacity-70 transition">Beranda</a>
+                <a href="#news" class="nav-link hover:opacity-70 transition">Berita</a>
+                <a href="#about" class="nav-link hover:opacity-70 transition">Tentang Kami</a>
+                <a href="#programs" class="nav-link hover:opacity-70 transition">Program</a>
+                <a href="#gallery" class="nav-link hover:opacity-70 transition">Galeri</a>
                 <a href="#donation" class="btn-primary text-white px-5 py-2 rounded-md transition ml-4 inline-block text-center shadow-lg bg-[#0A7BBF]">
+                    Donasi Sekarang
+                </a>
+            </div>
+
+            <!-- Tombol Hamburger (Mobile) -->
+            <button id="menu-toggle" aria-label="Buka menu" aria-expanded="false"
+                class="md:hidden w-11 h-11 flex items-center justify-center rounded-lg text-white transition hover:bg-white/10">
+                <i data-lucide="menu" id="menu-open-icon" class="w-7 h-7"></i>
+                <i data-lucide="x" id="menu-close-icon" class="w-7 h-7 hidden"></i>
+            </button>
+        </div>
+
+        <!-- Panel Menu Mobile -->
+        <div id="mobile-menu"
+            class="md:hidden fixed top-20 left-0 right-0 bg-white shadow-xl border-t border-[#E2F5FE] origin-top max-h-0 overflow-hidden opacity-0 transition-all duration-300 ease-out">
+            <div class="flex flex-col px-6 py-4 gap-1 text-[#132539] font-semibold">
+                <a href="#home" class="mobile-link py-3 border-b border-slate-100 hover:text-[#0A7BBF] transition">Beranda</a>
+                <a href="#news" class="mobile-link py-3 border-b border-slate-100 hover:text-[#0A7BBF] transition">Berita</a>
+                <a href="#about" class="mobile-link py-3 border-b border-slate-100 hover:text-[#0A7BBF] transition">Tentang Kami</a>
+                <a href="#programs" class="mobile-link py-3 border-b border-slate-100 hover:text-[#0A7BBF] transition">Program</a>
+                <a href="#gallery" class="mobile-link py-3 border-b border-slate-100 hover:text-[#0A7BBF] transition">Galeri</a>
+                <a href="#donation" class="mobile-link mt-3 mb-1 bg-[#0A7BBF] text-white px-5 py-3 rounded-lg text-center shadow-lg">
                     Donasi Sekarang
                 </a>
             </div>
@@ -38,84 +82,68 @@
     </nav>
 
     <!-- HERO SECTION -->
-    <section class="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
+    <section id="home" class="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <img src="assets/kegiatan1.jpeg" alt="Background" class="w-full h-full object-cover">
+            <img src="assets/kegiatan1.jpeg" alt="Background" class="hero-bg w-full h-full object-cover">
             <div class="absolute inset-0 bg-gradient-to-r from-[#0A7BBF]/95 via-[#0A7BBF]/80 to-transparent"></div>
         </div>
 
         <div class="relative z-10 max-w-5xl mx-auto px-6 text-center lg:text-left lg:ml-24">
-            <div class="flex justify-center lg:justify-start mb-6">
+            <div class="flex justify-center lg:justify-start mb-6 hero-anim" style="--d:0ms">
                 <div class="inline-flex items-center gap-2 px-4 py-1.5 backdrop-blur-md border border-[#E2F5FE]/20 rounded-full text-xs font-medium text-[#E2F5FE] bg-[#E2F5FE10]">
                     <i data-lucide="heart" class="w-3.5 h-3.5 fill-[#E2F5FE]"></i>
-                    Yayasan Sosial & Panti Asuhan
+                    Yayasan Sosial &amp; Panti Asuhan
                 </div>
             </div>
 
-            <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight text-white">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight text-white hero-anim" style="--d:120ms">
                 Memberikan Harapan untuk <br />
                 <span class="text-[#E2F5FE]">Generasi Selanjutnya</span>
             </h1>
 
-            <p class="text-lg md:text-xl max-w-3xl mb-10 leading-relaxed text-[#E2F5FE]/90">
+            <p class="text-lg md:text-xl max-w-3xl mb-10 leading-relaxed text-[#E2F5FE]/90 hero-anim" style="--d:240ms">
                 Bersama membangun masa depan cerah untuk anak-anak Indonesia. 
                 Bergabunglah dengan kami dalam memberikan pendidikan, kasih sayang, 
                 dan harapan untuk generasi penerus bangsa.
             </p>
 
-            <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <a href="#donation" class="bg-[#E2F5FE] text-[#0A7BBF] px-8 py-3.5 rounded-md font-bold transition flex items-center justify-center gap-2 shadow-xl hover:bg-white">
+            <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start hero-anim" style="--d:360ms">
+                <a href="#donation" class="bg-[#E2F5FE] text-[#0A7BBF] px-8 py-3.5 rounded-md font-bold transition flex items-center justify-center gap-2 shadow-xl hover:bg-white hover:scale-105 active:scale-95 duration-300">
                     Donasi Sekarang <i data-lucide="heart" class="w-[18px]"></i>
                 </a>
-                <a href="#about" class="bg-transparent hover:bg-white/10 backdrop-blur-sm border border-[#E2F5FE] text-white px-8 py-3.5 rounded-md font-bold transition flex items-center justify-center gap-2">
+                <a href="#about" class="bg-transparent hover:bg-white/10 backdrop-blur-sm border border-[#E2F5FE] text-white px-8 py-3.5 rounded-md font-bold transition flex items-center justify-center gap-2 hover:scale-105 active:scale-95 duration-300">
                     Pelajari Lebih Lanjut <i data-lucide="arrow-right" class="w-[18px]"></i>
                 </a>
             </div>
         </div>
+
+        <!-- Indikator Scroll -->
+        <a href="#news" aria-label="Gulir ke bawah" class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 text-white/80 hover:text-white transition hidden sm:block">
+            <i data-lucide="chevrons-down" class="w-7 h-7 animate-bounce-slow"></i>
+        </a>
     </section>
 
-    <!-- BERITA SECTION -->
-    <section id="news" class="py-16 px-4 bg-[#F8FAFC] scroll-mt-20">
-        <div class="max-w-5xl mx-auto">
-            <div class="flex items-center justify-between mb-8">
-                <h2 class="text-3xl font-bold text-[#132539]">Berita Terkini</h2>
-                <span class="px-4 py-1 bg-[#0A7BBF]/10 text-[#0A7BBF] rounded-full text-sm font-semibold">
-                    Kurban 2026
-                </span>
+    <!-- BERITA / BLOG SECTION (otomatis dari Google Sheet) -->
+    <section id="news" class="py-20 px-6 bg-[#F8FAFC] scroll-mt-20">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 reveal">
+                <div>
+                    <div class="inline-block px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-3 border border-[#132539]/10 bg-[#E2F5FE] text-[#0A7BBF]">
+                        Berita &amp; Blog
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-[#132539]">Kabar Terbaru dari Kami</h2>
+                </div>
+                <p class="text-slate-500 max-w-sm text-sm leading-relaxed">
+                    Update kegiatan, pengumuman, dan cerita dari LKSA Insan Harapan.
+                </p>
             </div>
 
-            <div class="bg-white rounded-[2.5rem] overflow-hidden shadow-lg border border-[#E2F5FE] flex flex-col md:flex-row">
-                <!-- Gambar Berita -->
-                <div class="md:w-2/5 h-32 md:h-auto overflow-hidden rounded-2xl">
-                    <img 
-                        src="https://images.unsplash.com/photo-1586459226458-409b7248148a?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
-                        alt="Persiapan Kurban" 
-                        class="w-full h-full object-cover object-center md:object-[center_35%] transition-transform duration-500 hover:scale-110"
-                    >
-                </div>
-
-                <!-- Konten Berita -->
-                <div class="md:w-3/5 p-8 md:p-10 flex flex-col justify-center">
-                    <div class="flex items-center gap-2 text-slate-500 text-sm mb-3">
-                        <i data-lucide="calendar" class="w-4 h-4"></i>
-                        <span>27 Mei 2026</span>
-                    </div>
-                    <h3 class="text-2xl font-bold text-[#132539] mb-4">
-                        Persiapan Pelaksanaan Ibadah Kurban 1447H di LKSA Insan Harapan
-                    </h3>
-                    <p class="text-slate-600 leading-relaxed mb-6">
-                        Menjelang Idul Adha, panti asuhan kami mulai membuka penerimaan dan penyaluran hewan kurban. Seluruh proses akan dilakukan dengan standar kebersihan yang ketat untuk memastikan amanah para donatur tersampaikan kepada yang berhak.
-                    </p>
-                    <div class="flex flex-wrap gap-4">
-                        <div class="flex items-center gap-2 text-[#0A7BBF] font-medium">
-                            <i data-lucide="check-circle" class="w-5 h-5"></i>
-                            <span>Hewan Sehat & Layak</span>
-                        </div>
-                        <div class="flex items-center gap-2 text-[#0A7BBF] font-medium">
-                            <i data-lucide="check-circle" class="w-5 h-5"></i>
-                            <span>Laporan Transparan</span>
-                        </div>
-                    </div>
+            <!-- Feed diisi otomatis oleh script.js dari Google Sheet -->
+            <div id="blog-feed" aria-live="polite">
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="blog-skeleton h-72 rounded-2xl"></div>
+                    <div class="blog-skeleton h-72 rounded-2xl"></div>
+                    <div class="blog-skeleton h-72 rounded-2xl"></div>
                 </div>
             </div>
         </div>
@@ -134,7 +162,7 @@
                 <div class="w-20 h-1.5 mx-auto rounded-full bg-[#0A7BBF]"></div>
             </div>
 
-            <div class="grid lg:grid-cols-2 gap-16 items-center mb-24">
+            <div class="reveal grid lg:grid-cols-2 gap-16 items-center mb-24">
                 <div class="relative">
                     <div class="absolute -top-6 -left-6 w-full h-full rounded-3xl -z-10 bg-[#E2F5FE]"></div>
                     <div class="rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] border-4 border-white">
@@ -153,7 +181,7 @@
                 </div>
             </div>
 
-            <div class="grid lg:grid-cols-5 gap-8">
+            <div class="reveal grid lg:grid-cols-5 gap-8">
                 <div class="lg:col-span-2 p-10 rounded-3xl text-white relative overflow-hidden group bg-[#0A7BBF]">
                     <i data-lucide="target" class="absolute -right-4 -bottom-4 w-32 h-32 text-white/5 group-hover:scale-110 transition-transform duration-500"></i>
                     <div class="relative z-10">
@@ -222,7 +250,7 @@
 
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Program 1 -->
-                <div class="relative bg-white rounded-3xl shadow-sm overflow-hidden border border-slate-100 max-w-sm">
+                <div class="reveal relative bg-white rounded-3xl shadow-sm overflow-hidden border border-slate-100 max-w-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
                     <!-- Bagian Gambar (Tinggi dinaikkan ke h-64) -->
                     <div class="h-64 overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1706250718869-677489d2691d?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
@@ -244,7 +272,7 @@
                     </div>
                 </div>
                 <!-- Program 2 -->
-                <div class="relative bg-white rounded-3xl shadow-sm overflow-hidden border border-slate-100 max-w-sm">
+                <div class="reveal relative bg-white rounded-3xl shadow-sm overflow-hidden border border-slate-100 max-w-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
                     
                     <!-- Bagian Gambar (Tinggi dinaikkan ke h-64) -->
                     <div class="h-64 overflow-hidden">
@@ -267,7 +295,7 @@
                     </div>
                 </div>
                 <!-- Program 3 -->
-                <div class="relative bg-white rounded-3xl shadow-sm overflow-hidden border border-slate-100 max-w-sm">
+                <div class="reveal relative bg-white rounded-3xl shadow-sm overflow-hidden border border-slate-100 max-w-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
                     
                     <!-- Bagian Gambar (Tinggi dinaikkan ke h-64) -->
                     <div class="h-64 overflow-hidden">
@@ -307,31 +335,31 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-                <div class="bg-white/5 backdrop-blur-md border border-white/10 p-10 rounded-3xl text-center hover:bg-white/10 transition-all duration-300 group">
+                <div class="reveal bg-white/5 backdrop-blur-md border border-white/10 p-10 rounded-3xl text-center hover:bg-white/10 transition-all duration-300 group">
                     <div class="w-16 h-16 bg-[#E2F5FE]/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                         <i data-lucide="users" class="text-[#E2F5FE] w-7 h-7"></i>
                     </div>
-                    <div class="text-5xl font-black mb-2 tracking-tight text-[#E2F5FE]">28</div>
+                    <div class="text-5xl font-black mb-2 tracking-tight text-[#E2F5FE]"><span class="counter" data-count="28">0</span></div>
                     <div class="text-[#E2F5FE]/60 font-medium uppercase tracking-widest text-sm">Anak Asuh Aktif</div>
                 </div>
-                <div class="bg-white/5 backdrop-blur-md border border-white/10 p-10 rounded-3xl text-center hover:bg-white/10 transition-all duration-300 group">
+                <div class="reveal bg-white/5 backdrop-blur-md border border-white/10 p-10 rounded-3xl text-center hover:bg-white/10 transition-all duration-300 group" style="transition-delay:.1s">
                     <div class="w-16 h-16 bg-[#E2F5FE]/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                         <i data-lucide="award" class="text-[#E2F5FE] w-7 h-7"></i>
                     </div>
-                    <div class="text-5xl font-black mb-2 tracking-tight text-[#E2F5FE]">27</div>
+                    <div class="text-5xl font-black mb-2 tracking-tight text-[#E2F5FE]"><span class="counter" data-count="27">0</span></div>
                     <div class="text-[#E2F5FE]/60 font-medium uppercase tracking-widest text-sm">Tahun Pengalaman</div>
                 </div>
-                <div class="bg-white/5 backdrop-blur-md border border-white/10 p-10 rounded-3xl text-center hover:bg-white/10 transition-all duration-300 group">
+                <div class="reveal bg-white/5 backdrop-blur-md border border-white/10 p-10 rounded-3xl text-center hover:bg-white/10 transition-all duration-300 group" style="transition-delay:.2s">
                     <div class="w-16 h-16 bg-[#E2F5FE]/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                         <i data-lucide="shield-check" class="text-[#E2F5FE] w-7 h-7"></i>
                     </div>
-                    <div class="text-5xl font-black mb-2 tracking-tight text-[#E2F5FE]">100%</div>
+                    <div class="text-5xl font-black mb-2 tracking-tight text-[#E2F5FE]"><span class="counter" data-count="100" data-suffix="%">0</span></div>
                     <div class="text-[#E2F5FE]/60 font-medium uppercase tracking-widest text-sm">Transparansi</div>
                 </div>
             </div>
 
-            <div class="max-w-3xl mx-auto">
-                <div class="bg-[#E2F5FE5] backdrop-blur-sm border border-[#E2F5FE]/10 p-10 rounded-3xl text-center">
+            <div class="max-w-3xl mx-auto reveal">
+                <div class="bg-white/5 backdrop-blur-sm border border-[#E2F5FE]/10 p-10 rounded-3xl text-center">
                     <h4 class="text-2xl font-bold mb-4 text-[#E2F5FE]">Komitmen Transparansi Kami</h4>
                     <p class="text-white/70 leading-relaxed">
                         Setiap donasi yang kami terima dikelola dengan penuh tanggung jawab dan transparansi. 
@@ -375,50 +403,40 @@
                 <div class="w-20 h-1.5 mx-auto rounded-full mb-6 bg-[#0A7BBF]"></div>
             </div>
 
-            <div class="max-w-5xl mx-auto bg-white rounded-[3rem] overflow-hidden shadow-xl border border-[#E2F5FE] flex flex-col md:flex-row">
+            <div class="reveal max-w-5xl mx-auto bg-white rounded-[3rem] overflow-hidden shadow-xl border border-[#E2F5FE] flex flex-col md:flex-row">
                 <!-- Bagian Kiri: Daftar Bank -->
                 <div class="p-10 md:p-12 md:w-1/2">
                     <h2 class="text-3xl font-bold mb-6 text-[#132539]">Salurkan Kebaikan Anda</h2>
                     <div class="space-y-4">
-                        <span id="bsi-tip" class="absolute top-2 right-2 bg-[#132539] text-white text-[10px] px-2 py-1 rounded opacity-0 transition-opacity">Tersalin!</span>
-                        <div class="p-5 rounded-2xl border border-[#E2F5FE] hover:border-[#132539]/30 transition-all cursor-pointer bg-[#E2F5FE20] group relative" 
+                        <div class="p-5 rounded-2xl border border-[#E2F5FE] hover:border-[#0A7BBF]/40 hover:shadow-md transition-all cursor-pointer bg-[#E2F5FE20] group relative" 
                             onclick="copyToClipboard('7062222268', 'bsi-tip')">
-                            
+                            <span id="bsi-tip" class="absolute top-2 right-2 bg-[#132539] text-white text-[10px] px-2 py-1 rounded opacity-0 transition-opacity pointer-events-none">Tersalin!</span>
                             <p class="text-xs text-slate-500 font-bold uppercase mb-1 tracking-wider">Bank Syariah Indonesia (BSI)</p>
                             <div class="flex items-center justify-between">
                                 <p class="text-2xl font-mono font-bold text-[#132539]">706 222 2268</p>
                                 <i data-lucide="copy" class="w-4 h-4 text-slate-400 group-hover:text-[#0A7BBF] transition-colors"></i>
                             </div>
                             <p class="text-sm text-slate-600 mt-1">a.n. Panti Asuhan Insan Harapan</p>
-
-                            <!-- Notifikasi kecil (Tooltip) -->
-                            <span id="bri-tip" class="absolute top-2 right-2 bg-[#132539] text-white text-[10px] px-2 py-1 rounded opacity-0 transition-opacity">Tersalin!</span>
                         </div>
-                        <div class="p-5 rounded-2xl border border-[#E2F5FE] hover:border-[#132539]/30 transition-all cursor-pointer bg-[#E2F5FE20] group relative" 
+                        <div class="p-5 rounded-2xl border border-[#E2F5FE] hover:border-[#0A7BBF]/40 hover:shadow-md transition-all cursor-pointer bg-[#E2F5FE20] group relative" 
                             onclick="copyToClipboard('075501002307502', 'bri-tip')">
-                            
+                            <span id="bri-tip" class="absolute top-2 right-2 bg-[#132539] text-white text-[10px] px-2 py-1 rounded opacity-0 transition-opacity pointer-events-none">Tersalin!</span>
                             <p class="text-xs text-slate-500 font-bold uppercase mb-1 tracking-wider">Bank Rakyat Indonesia (BRI)</p>
                             <div class="flex items-center justify-between">
                                 <p class="text-2xl font-mono font-bold text-[#132539]">0755 0100 2307 502</p>
                                 <i data-lucide="copy" class="w-4 h-4 text-slate-400 group-hover:text-[#0A7BBF] transition-colors"></i>
                             </div>
                             <p class="text-sm text-slate-600 mt-1">a.n. Panti Asuhan Insan Harapan</p>
-
-                            <!-- Notifikasi kecil (Tooltip) -->
-                            <span id="bjb-tip" class="absolute top-2 right-2 bg-[#132539] text-white text-[10px] px-2 py-1 rounded opacity-0 transition-opacity">Tersalin!</span>
                         </div>
-                        <div class="p-5 rounded-2xl border border-[#E2F5FE] hover:border-[#132539]/30 transition-all cursor-pointer bg-[#E2F5FE20] group relative" 
+                        <div class="p-5 rounded-2xl border border-[#E2F5FE] hover:border-[#0A7BBF]/40 hover:shadow-md transition-all cursor-pointer bg-[#E2F5FE20] group relative" 
                             onclick="copyToClipboard('0118776070100', 'bjb-tip')">
-                            
+                            <span id="bjb-tip" class="absolute top-2 right-2 bg-[#132539] text-white text-[10px] px-2 py-1 rounded opacity-0 transition-opacity pointer-events-none">Tersalin!</span>
                             <p class="text-xs text-slate-500 font-bold uppercase mb-1 tracking-wider">Bank BJB</p>
                             <div class="flex items-center justify-between">
                                 <p class="text-2xl font-mono font-bold text-[#132539]">0118 7760 70100</p>
                                 <i data-lucide="copy" class="w-4 h-4 text-slate-400 group-hover:text-[#0A7BBF] transition-colors"></i>
                             </div>
                             <p class="text-sm text-slate-600 mt-1">a.n. Panti Asuhan Insan Harapan</p>
-
-                            <!-- Notifikasi kecil (Tooltip) -->
-                            <span id="bri-tip" class="absolute top-2 right-2 bg-[#132539] text-white text-[10px] px-2 py-1 rounded opacity-0 transition-opacity">Tersalin!</span>
                         </div>
                     </div>
                 </div>
@@ -503,6 +521,56 @@
             <p>© 2026 LKSA Insan Harapan. Seluruh hak cipta dilindungi.</p>
         </div>
     </footer>
+
+    <!-- TOMBOL WHATSAPP MENGAMBANG -->
+    <a href="https://wa.me/6282116313233?text=Assalamualaikum,%20saya%20ingin%20bertanya%20tentang%20LKSA%20Insan%20Harapan"
+        target="_blank" rel="noopener" aria-label="Hubungi via WhatsApp"
+        class="fixed bottom-6 right-6 z-40 flex items-center gap-3 bg-[#25D366] text-white pl-4 pr-5 py-3.5 rounded-full shadow-2xl hover:scale-105 active:scale-95 transition-transform group">
+        <i data-lucide="message-circle" class="w-6 h-6 fill-current"></i>
+        <span class="font-semibold text-sm hidden sm:inline">Chat Kami</span>
+        <span class="absolute inset-0 rounded-full bg-[#25D366] -z-10 animate-ping-slow opacity-40"></span>
+    </a>
+
+    <!-- TOMBOL KEMBALI KE ATAS -->
+    <button id="back-to-top" aria-label="Kembali ke atas"
+        class="fixed bottom-24 right-6 z-40 w-12 h-12 rounded-full bg-[#0A7BBF] text-white shadow-xl flex items-center justify-center opacity-0 translate-y-4 pointer-events-none transition-all duration-300 hover:bg-[#0d8cd9]">
+        <i data-lucide="arrow-up" class="w-5 h-5"></i>
+    </button>
+
+    <!-- MODAL PEMBACA ARTIKEL BLOG -->
+    <div id="blog-modal" class="fixed inset-0 z-[70] bg-black/60 backdrop-blur-sm flex items-start md:items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300 overflow-y-auto">
+        <article class="bg-white rounded-3xl max-w-2xl w-full my-8 overflow-hidden shadow-2xl">
+            <div id="bm-image-wrap" class="h-56 md:h-72 overflow-hidden bg-[#E2F5FE]">
+                <img id="bm-image" src="" alt="" class="w-full h-full object-cover">
+            </div>
+            <div class="p-8 md:p-10">
+                <div class="flex flex-wrap items-center gap-3 text-slate-500 text-sm mb-4">
+                    <span id="bm-cat" class="px-3 py-0.5 bg-[#0A7BBF]/10 text-[#0A7BBF] rounded-full text-xs font-semibold"></span>
+                    <span class="flex items-center gap-1.5"><i data-lucide="calendar" class="w-4 h-4"></i><span id="bm-date"></span></span>
+                </div>
+                <h3 id="bm-title" class="text-2xl md:text-3xl font-bold text-[#132539] mb-5 leading-snug"></h3>
+                <div id="bm-body" class="text-slate-600 leading-relaxed space-y-4"></div>
+            </div>
+        </article>
+        <button id="bm-close" aria-label="Tutup artikel" class="fixed top-5 right-5 z-[71] w-12 h-12 rounded-full bg-white shadow-lg text-[#132539] flex items-center justify-center hover:bg-slate-100 transition">
+            <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+    </div>
+
+    <!-- LIGHTBOX GALERI -->
+    <div id="lightbox" class="fixed inset-0 z-[60] bg-black/90 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
+        <button id="lb-close" aria-label="Tutup" class="absolute top-5 right-5 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition">
+            <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+        <button id="lb-prev" aria-label="Sebelumnya" class="absolute left-3 md:left-6 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition">
+            <i data-lucide="chevron-left" class="w-7 h-7"></i>
+        </button>
+        <button id="lb-next" aria-label="Selanjutnya" class="absolute right-3 md:right-6 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition">
+            <i data-lucide="chevron-right" class="w-7 h-7"></i>
+        </button>
+        <img id="lb-image" src="" alt="Galeri" class="max-w-[90vw] max-h-[85vh] rounded-xl shadow-2xl object-contain select-none">
+        <div id="lb-counter" class="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/80 text-sm font-medium"></div>
+    </div>
 
     <!-- Lucide Icons CDN -->
     <script src="https://unpkg.com/lucide@latest"></script>
