@@ -221,7 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //  BLOG / BERITA dari GOOGLE SHEET
     //  Cara setup ada di bawah (lihat komentar PANDUAN).
     // ============================================================
-    const BLOG_SHEET_ID = '1Tc2B5loNraVDmZPNgKbs6CGEqyO9yUBqTJLRJsAQxpo';
+    const BLOG_SHEET_ID = '1vR5L3VeUHdCf5gmHguzLuJ-PVL941YOko5DRAke-ZV4';
     const BLOG_SHEET_NAME = 'Blog'; // nama tab/sheet di dalam file
 
     // Data contoh — tampil bila Sheet belum dikonfigurasi atau kosong,
